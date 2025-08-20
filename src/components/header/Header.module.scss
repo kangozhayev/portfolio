@@ -1,0 +1,186 @@
+.container {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 100;
+  border-bottom: 1px solid #eee;
+  --header-h: 56px;
+}
+
+.nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.left {
+  flex: 0 0 auto;
+}
+.center {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.right {
+  flex: 0 0 auto;
+}
+
+.logo {
+  text-decoration: none;
+  color: #111827;
+  font-weight: 800;
+  font-size: 20px;
+  letter-spacing: 0.2px;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #6b7280;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.menu a:hover {
+  color: #111827;
+}
+
+.cta {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid #9ca3af;
+  border-radius: 9999px;
+  text-decoration: none;
+  color: #111827;
+  background: transparent;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.1s ease;
+}
+
+.cta:hover {
+  background: #f9fafb;
+  border-color: #6b7280;
+}
+
+.cta:active {
+  transform: translateY(1px);
+}
+
+@media (max-width: 768px) {
+  .nav {
+    padding: 12px 16px;
+  }
+  .menu {
+    gap: 18px;
+  }
+  .logo {
+    font-size: 18px;
+  }
+}
+
+.burger {
+  display: none;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin-left: 8px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-direction: column;
+}
+
+.burgerBar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #111827;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.burgerBar + .burgerBar {
+  margin-top: 5px;
+}
+
+.burgerActive .burgerBar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.burgerActive .burgerBar:nth-child(2) {
+  opacity: 0;
+}
+.burgerActive .burgerBar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.mobileMenu {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.mobileOpen {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobilePanel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  padding: 16px 20px 20px;
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+
+  transform: translateY(-12px);
+  transition: transform 0.2s ease;
+}
+.mobileOpen .mobilePanel {
+  transform: translateY(0);
+}
+
+.mobileList {
+  list-style: none;
+  margin: 0;
+  padding: 8px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.mobileList a {
+  text-decoration: none;
+  color: #111827;
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .center {
+    display: none;
+  }
+  .right .cta {
+    display: none;
+  }
+  .burger {
+    display: inline-flex;
+  }
+}
