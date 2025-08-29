@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Aurora from '../aurora/Aurora';
-import Link from 'next/link';
+
 import ShinyButton from '../ui/ShinyButton';
 
 export default function Hero() {

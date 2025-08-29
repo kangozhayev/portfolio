@@ -32,9 +32,15 @@ export default function Contacts() {
       if (!res.ok || !data.ok) throw new Error(data?.error || 'Failed to send');
       setStatus('ok');
       (e.currentTarget as HTMLFormElement).reset();
-    } catch (err: any) {
+    } catch (err: unknown) {
       setStatus('err');
-      setErrMsg(err.message || 'Something went wrong');
+      const msg =
+        err instanceof Error
+          ? err.message
+          : typeof err === 'string'
+          ? err
+          : 'Something went wrong';
+      setErrMsg(msg);
     }
   }
 
