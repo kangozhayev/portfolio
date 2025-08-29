@@ -1,8 +1,13 @@
 import type { Metadata } from 'next';
+import { Analytics } from '@vercel/analytics/next';
+import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Portfolio Daniyar Kangozhayev',
-  description: 'Portfolio Daniyar Kangozhayev',
+  title: 'Daniyar Kangozhayev',
+  description: 'Daniyar Kangozhayev',
+  icons: {
+    icon: '/favicon.ico',
+  },
 };
 
 export default function RootLayout({
@@ -11,8 +16,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html
+      lang="en"
+      className="scroll-smooth"
+    >
+      <body>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
