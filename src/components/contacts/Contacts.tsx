@@ -30,8 +30,9 @@ export default function Contacts() {
       });
       const data = await res.json();
       if (!res.ok || !data.ok) throw new Error(data?.error || 'Failed to send');
+
       setStatus('ok');
-      (e.currentTarget as HTMLFormElement).reset();
+      form.reset();
     } catch (err: unknown) {
       setStatus('err');
       const msg =
