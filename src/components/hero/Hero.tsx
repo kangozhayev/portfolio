@@ -35,7 +35,7 @@ export default function Hero() {
             <div className="mt-10 flex flex-wrap items-center gap-4 justify-center md:justify-start">
               <div className="mt-10 flex flex-wrap items-center gap-4 justify-center md:justify-start">
                 <ShinyButton
-                  href="/about"
+                  href="/#about"
                   variant="white"
                 >
                   About Me

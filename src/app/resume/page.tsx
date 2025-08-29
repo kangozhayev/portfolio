@@ -311,11 +311,6 @@ export default function ResumePage() {
             Print
           </button>
         </div>
-
-        {/* Updated timestamp */}
-        <p className="mt-6 text-xs text-slate-400 text-center print:hidden">
-          Resume updated 29 August 2025
-        </p>
       </section>
     </main>
   );
