@@ -22,7 +22,7 @@ export default function Hero() {
       <div className="relative z-10 mx-auto max-w-6xl px-6 sm:px-8 md:px-12 lg:px-16 pt-[var(--nav-offset,0px)] min-h-[calc(100dvh-var(--nav-offset,0px))] flex items-center">
         <div className="grid w-full grid-cols-1 md:grid-cols-2 items-center gap-10 md:gap-16">
           <div className="text-center md:text-left">
-            <h1 className="mt-2 sm:mt-4 md:mt-0 text-5xl sm:text-6xl font-extrabold leading-[1.05] tracking-tight drop-shadow-[0_8px_24px_rgba(0,0,0,0.45)]">
+            <h1 className="mt-6 sm:mt-4 md:mt-0 text-5xl sm:text-6xl font-extrabold leading-[1.05] tracking-tight drop-shadow-[0_8px_24px_rgba(0,0,0,0.45)]">
               Hey,{` `}
               <br className="hidden sm:block" />
               <span className="whitespace-nowrap">this is Daniyar</span>
