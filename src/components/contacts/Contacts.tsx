@@ -11,10 +11,12 @@ export default function Contacts() {
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+
+    const form = e.currentTarget as HTMLFormElement;
     setStatus('loading');
     setErrMsg('');
 
-    const fd = new FormData(e.currentTarget);
+    const fd = new FormData(form);
     const payload = {
       name: String(fd.get('name') || ''),
       email: String(fd.get('email') || ''),
